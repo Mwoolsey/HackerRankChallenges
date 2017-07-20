@@ -12,9 +12,9 @@ def timeConversion(s):
     if (1 <= hour <= 12) and (0 <= minutes <= 59) and (0 <= seconds <= 59):
         if period == "AM":
             if hour == 12:
-                return "00:" + str(minutes) + ":" + str(seconds)
+                return "00:" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2)
             else:
-                return str(hours).zfill(2) + ":" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2)
+                return str(hour).zfill(2) + ":" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2)
         elif period == "PM":
             if hour == 12:
                 return str(hour).zfill(2) + ":" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2)
